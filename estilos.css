@@ -1,0 +1,274 @@
+/*Archivo CSS, este archivo es externo al de la pagina principal y se usa para definir los estilos.*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Monospace";
+}
+
+/*Aqui se le da estilo a la seccion definida como contenedor*/
+.contenedor {
+	background: #263647;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+
+	/* Flex */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*flex-flow: row wrap;*/ /*Es una combinacion de los dos anteriores*/
+}
+
+body {
+	background: #263647;
+}
+
+/*Aqui se define el estilo de la cabecera de la pagina*/
+header {
+	background: #2c3e50;
+	width: 100%;
+	/*padding: 20px;*/
+
+	/* Flex */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+header .logo {
+	color: #fff;
+	font-size: 30px;
+	margin: 20px;
+}
+
+header .logo img {
+	width: 50px;
+	vertical-align: top;
+}
+
+header .logo a {
+	color: #fff;
+	text-decoration: none;
+	line-height: 50px;
+}
+
+header .social {
+	/*background: #DC7A23;*/
+
+	margin-right: 30px;
+
+	/* Flex */
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+header .social a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+
+	text-align: center;
+
+	/* Flex */
+	flex-grow: 1;
+}
+
+header .social a:hover{
+	background: #FF912F;
+}
+
+.main {
+	background: #263647;
+	/*padding: 20px;*/
+
+	flex: 1 1 70%; /*flex-shrink flex-grow flex-basis*/
+	/*flex: 1;*/ /*Valor proporcional a los demas, se va a adaptar al espacio que quede*/
+}
+
+article {
+	padding: 20px;
+	color: #fff;
+}
+
+.main article {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.main article:nth-last-child(1) { /*hacemos referencia al ultimo hijo de la clase*/
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	border-bottom: none;
+}
+
+.main .banner {
+	width: 98%;
+	margin: 10px auto;
+}
+
+.main .banner img {
+	width: 100%;
+	height: 370px;
+	vertical-align: top;
+}
+
+.main .about {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.main .about .profile{
+	float: left;
+	text-align: center;
+	margin: 10px auto;
+	padding: 0 25px;
+	color: #fff;
+}
+
+.main .about .profile img {
+	border-radius: 50%;
+}
+
+.main .experience {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.main .experience img {
+	margin: 10px 20px;
+}
+
+.main .experience p {
+	margin: auto 20px;
+}
+
+.main .education {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.main .education img {
+	margin: 10px 20px;
+}
+
+.main .education p {
+	margin: auto 20px;
+}
+
+.titulo {
+	color: #fff;
+	font-size: 25px;
+	/*font-weight: bold;*/
+}
+
+.subtitulo {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.texto {
+	color: #fff;
+	font-size: 15px;
+	width: 80%;
+}
+
+/*Aqui se da estilo al pie de pagina*/
+footer {
+	background: #2c3e50;
+	width: 100%;
+	padding: 20px;
+
+	/* Flex */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .links {
+	background: #DC7A23;
+}
+
+footer .links a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+}
+
+footer .links a:hover{
+	background: #FF912F;
+}
+
+/*CSS de las lineal skills*/
+#skill {
+  width: 500px;
+  /*background-color: #fff;*/
+  padding: 20px 50px;
+}
+
+.skill-container {
+  width: 500px;
+  height: 50px;
+  background-color: #ddd;
+  margin: 10px 0px;
+  display: inline-block;
+  position: relative;
+}
+
+.skill-container p {
+  line-height: 50px;
+  position: absolute;
+  color: #fff;
+  font-family: cursive;
+  font-size: 12px;
+}
+
+.skill-container p:nth-child(2) {
+  width: 120px;
+  padding-left: 20px;
+  /*background-color: rgba(0,0,0,0.3);*/
+}
+
+.skill-container p:nth-child(3) {
+  right: 10px;
+  color:rgba(0, 0, 0, 0.5);
+}
+
+.skill-graph {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+/*Aqui se definen los MEDIA QUERIES, se utilizan en este caso para hacer adaptable la pagina a distintos dispositivos*/
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction: column;
+	}
+
+	header {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	header .logo {
+		margin: 20px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	footer {
+		justify-content: space-around;
+	}
+}
