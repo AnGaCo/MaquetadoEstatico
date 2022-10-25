@@ -1,4 +1,4 @@
-/*Archivo CSS, este archivo es externo al de la pagina principal y se usa para definir los estilos.*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,31 +6,25 @@
 	font-family: "Monospace";
 }
 
-/*Aqui se le da estilo a la seccion definida como contenedor*/
 .contenedor {
 	background: #263647;
 	width: 100%;
 	max-width: 100%;
 	margin: 0;
 
-	/* Flex */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/*flex-flow: row wrap;*/ /*Es una combinacion de los dos anteriores*/
 }
 
 body {
 	background: #263647;
 }
 
-/*Aqui se define el estilo de la cabecera de la pagina*/
 header {
 	background: #2c3e50;
 	width: 100%;
-	/*padding: 20px;*/
 
-	/* Flex */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -43,11 +37,6 @@ header .logo {
 	margin: 20px;
 }
 
-header .logo img {
-	width: 50px;
-	vertical-align: top;
-}
-
 header .logo a {
 	color: #fff;
 	text-decoration: none;
@@ -55,11 +44,8 @@ header .logo a {
 }
 
 header .social {
-	/*background: #DC7A23;*/
-
 	margin-right: 30px;
 
-	/* Flex */
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -70,10 +56,8 @@ header .social a{
 	text-decoration: none;
 	padding: 10px;
 	display: inline-block;
-
 	text-align: center;
 
-	/* Flex */
 	flex-grow: 1;
 }
 
@@ -83,10 +67,8 @@ header .social a:hover{
 
 .main {
 	background: #263647;
-	/*padding: 20px;*/
 
-	flex: 1 1 70%; /*flex-shrink flex-grow flex-basis*/
-	/*flex: 1;*/ /*Valor proporcional a los demas, se va a adaptar al espacio que quede*/
+	flex: 1 1 70%;
 }
 
 article {
@@ -100,7 +82,7 @@ article {
 	border-bottom: 1px solid #fff;
 }
 
-.main article:nth-last-child(1) { /*hacemos referencia al ultimo hijo de la clase*/
+.main article:nth-last-child(1) {
 	margin-bottom: 0;
 	padding-bottom: 20px;
 	border-bottom: none;
@@ -181,13 +163,11 @@ article {
 	width: 80%;
 }
 
-/*Aqui se da estilo al pie de pagina*/
 footer {
 	background: #2c3e50;
 	width: 100%;
 	padding: 20px;
 
-	/* Flex */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -208,10 +188,8 @@ footer .links a:hover{
 	background: #FF912F;
 }
 
-/*CSS de las lineal skills*/
 #skill {
   width: 500px;
-  /*background-color: #fff;*/
   padding: 20px 50px;
 }
 
@@ -235,7 +213,6 @@ footer .links a:hover{
 .skill-container p:nth-child(2) {
   width: 120px;
   padding-left: 20px;
-  /*background-color: rgba(0,0,0,0.3);*/
 }
 
 .skill-container p:nth-child(3) {
@@ -249,7 +226,6 @@ footer .links a:hover{
   left: 0;
 }
 
-/*Aqui se definen los MEDIA QUERIES, se utilizan en este caso para hacer adaptable la pagina a distintos dispositivos*/
 @media screen and (max-width: 800px) {
 	.contenedor {
 		flex-direction: column;
